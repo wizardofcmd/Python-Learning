@@ -3,9 +3,8 @@
 
 class Stack():
     """Class that allows for Stack functionality"""
-    def __init__(self, collection, item):
+    def __init__(self):
         self.collection = []
-        self.item = item
 
     def push(self, item):
         """Push an item to the top of the stack."""
@@ -19,10 +18,9 @@ class Stack():
     def pop(self):
         """Remove the last added item to the stack."""
         popped = self.collection[-1]
-        self.collection[-1].remove(popped)
-        return popped
+        self.collection.remove(popped)
 
-    def isEmpty(self):
+    def is_empty(self):
         """Check if the stack is empty."""
         if self.collection:
             return True
@@ -34,7 +32,7 @@ class Stack():
         for item in self.collection:
             self.collection.remove(item)
 
-    def showStack(self):
+    def show_stack(self):
         """Loop through the whole stack and print each item to the user."""
         for item in self.collection:
             print(item)
