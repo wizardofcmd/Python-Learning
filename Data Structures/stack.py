@@ -22,7 +22,7 @@ class Stack():
 
     def is_empty(self):
         """Check if the stack is empty."""
-        if self.collection:
+        if not self.collection:
             return True
         else:
             return False

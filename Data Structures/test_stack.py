@@ -28,4 +28,15 @@ class TestStack(unittest.TestCase):
         self.S.pop()
         self.assertNotIn('strawberry', self.S.collection)
 
+    def test_is_empty(self):
+        """Test that the method correctly returns True if stack is empty."""
+        answer = self.S.is_empty()
+        self.assertEqual(answer, True)
+
+    def test_clear(self):
+        """Test that the stack is successfully emptied."""
+        self.S.push('blueberry')
+        self.S.clear()
+        self.assertTrue(self.S.is_empty())
+        
 unittest.main()
