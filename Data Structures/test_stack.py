@@ -17,6 +17,7 @@ class TestStack(unittest.TestCase):
 
     def test_peek(self):
         """Test that the top item in the stack is returned."""
+        self.S.push('orange')
         self.S.push('banana')
         top = self.S.peek()
         self.assertEqual(top, 'banana')
@@ -38,5 +39,5 @@ class TestStack(unittest.TestCase):
         self.S.push('blueberry')
         self.S.clear()
         self.assertTrue(self.S.is_empty())
-        
+
 unittest.main()
