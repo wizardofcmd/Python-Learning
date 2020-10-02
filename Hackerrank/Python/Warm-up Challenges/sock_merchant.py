@@ -1,3 +1,10 @@
+###############################################################################
+### One solution I found on Hackerrank basically turned all that            ###
+### code into a pile of mush:                                               ###
+###                                                                         ###
+### return sum([ar.count(i)//2 for i in set(ar)])                           ###
+###############################################################################
+
 def sockMerchant(ar):
     pair = 0
     # Setting n to be the set of numbers that exist in ar
