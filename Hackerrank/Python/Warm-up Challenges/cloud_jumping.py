@@ -1,14 +1,23 @@
+###############################################################################
+###                                                                         ###
+###             Had to look at the editorial for the solution.              ###
+###                                                                         ###
+###############################################################################
+
 def cloudJumping(c):
     curr = 0
-    pathLength = 0
-    while curr != len(c)-1:
-        if curr < len(c)-2 and c[curr+2] == 0:
-            curr += 2
-        else:
-            curr += 1
+    jumps = 0
+    n = len(c)
 
-        pathLength += 1
+    while (curr < (n-1)):
+        # Making sure no IndexError occurs
+        if ((curr+2) < n):
+            if (c[curr+2] == 0):
+                curr += 1
+        curr += 1
+        jumps += 1
 
-c = [0, 0, 1, 0, 0, 1, 0]
-jumps = cloudJumping(c)
-print(jumps)
+    print(jumps)
+
+c = [0, 0, 0, 1, 0, 0]
+cloudJumping(c)
