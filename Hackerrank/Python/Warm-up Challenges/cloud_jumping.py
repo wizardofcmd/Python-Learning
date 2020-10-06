@@ -1,19 +1,13 @@
 def cloudJumping(c):
-    jumps = 0
-    for cloud in range(len(c)):
-        if c[cloud] == 1:
-            jumps += 1
-            continue
-        elif c[cloud] == 0:
-            try:
-                if c[cloud+1] == 0:
-                    jumps += 1
-                    continue
-            except IndexError:
-                continue
-            jumps += 1
-    return jumps
+    curr = 0
+    pathLength = 0
+    while curr != len(c)-1:
+        if curr < len(c)-2 and c[curr+2] == 0:
+            curr += 2
+        else:
+            curr += 1
 
+        pathLength += 1
 
 c = [0, 0, 1, 0, 0, 1, 0]
 jumps = cloudJumping(c)
